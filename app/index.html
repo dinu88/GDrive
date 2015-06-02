@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app='GDrive'>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>GDrive</title>
+  <base href="./">
+
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+  <script type="text/javascript" src="bower_components/pouchdb/dist/pouchdb.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+
+  <script type="text/javascript" src="Drive.js"></script>
+  <script type="text/javascript" src="app.v2.js"></script>
+  <script type="text/javascript" src="routes.js"></script>
+  <script type="text/javascript" src="controllers.js"></script>
+  <script>
+    // Load native UI library
+    var gui = require('nw.gui');
+
+
+
+
+
+
+    var win = gui.Window.get();
+
+    // Get the minimize event
+    win.on('minimize', function() {
+      // Hide window
+      this.hide();
+
+
+      // Show window and remove tray when clicked
+      tray.on('click', function() {
+        win.show();
+        this.remove();
+//        tray = null;
+      });
+    });
+
+    // Remove the tray
+    //    tray.remove();
+    //    tray = null;
+  </script>
+  <style type="text/css">
+    .container-fluid {
+      max-width: 60%;
+      margin-right: auto;
+      margin-left: auto;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row content" ui-view="content"></div>
+</div>
+</body>
+</html>

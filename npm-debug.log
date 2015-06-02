@@ -1,0 +1,255 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/undefined/.nvm/v0.11.15/bin/node',
+1 verbose cli   '/home/undefined/.nvm/v0.11.15/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'pouchdb',
+1 verbose cli   '--save' ]
+2 info using npm@2.1.6
+3 info using node@v0.11.15
+4 warn package.json GDrive@ No description
+5 warn package.json GDrive@ No repository field.
+6 warn package.json GDrive@ No README data
+7 warn package.json querystring@0.2.0 querystring is also the name of a node core module.
+8 silly cache add args [ 'pouchdb', null ]
+9 verbose cache add spec pouchdb
+10 silly cache add parsed spec { raw: 'pouchdb',
+10 silly cache add   scope: null,
+10 silly cache add   name: 'pouchdb',
+10 silly cache add   rawSpec: '',
+10 silly cache add   spec: '*',
+10 silly cache add   type: 'range' }
+11 verbose addNamed pouchdb@*
+12 silly addNamed semver.valid null
+13 silly addNamed semver.validRange *
+14 silly addNameRange { name: 'pouchdb', range: '*', hasData: false }
+15 verbose mapToRegistry name pouchdb
+16 verbose mapToRegistry uri https://registry.npmjs.org/pouchdb
+17 verbose addNameRange registry:https://registry.npmjs.org/pouchdb not in flight; fetching
+18 verbose request on initialization, where is /pouchdb
+19 verbose request after pass 1, where is /pouchdb
+20 verbose request url raw /pouchdb
+21 verbose request resolving registry [ 'https://registry.npmjs.org/pouchdb', './pouchdb' ]
+22 verbose request after pass 2, where is https://registry.npmjs.org/pouchdb
+23 verbose request no auth needed
+24 info attempt registry request try #1 at 3:38:54 PM
+25 verbose request id 5c8a7d59b0c25983
+26 http request GET https://registry.npmjs.org/pouchdb
+27 http 200 https://registry.npmjs.org/pouchdb
+28 silly registry.get cb [ 200,
+28 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 silly registry.get     etag: '"1JJT8C8VOQBLPD8R8FOXCZ17Y"',
+28 silly registry.get     'content-type': 'application/json',
+28 silly registry.get     'cache-control': 'max-age=60',
+28 silly registry.get     'content-length': '100468',
+28 silly registry.get     'accept-ranges': 'bytes',
+28 silly registry.get     date: 'Sat, 18 Apr 2015 14:38:54 GMT',
+28 silly registry.get     via: '1.1 varnish',
+28 silly registry.get     age: '0',
+28 silly registry.get     connection: 'close',
+28 silly registry.get     'x-served-by': 'cache-lcy1123-LCY',
+28 silly registry.get     'x-cache': 'MISS',
+28 silly registry.get     'x-cache-hits': '0',
+28 silly registry.get     'x-timer': 'S1429367934.455864,VS0,VE87',
+28 silly registry.get     vary: 'Accept' } ]
+29 silly addNameRange number 2 { name: 'pouchdb', range: '*', hasData: true }
+30 silly addNameRange versions [ 'pouchdb',
+30 silly addNameRange   [ '0.0.2',
+30 silly addNameRange     '0.0.3',
+30 silly addNameRange     '0.0.4',
+30 silly addNameRange     '0.0.5',
+30 silly addNameRange     '0.0.6',
+30 silly addNameRange     '0.0.7',
+30 silly addNameRange     '0.0.8',
+30 silly addNameRange     '0.0.9',
+30 silly addNameRange     '0.0.10',
+30 silly addNameRange     '0.0.11',
+30 silly addNameRange     '0.0.12',
+30 silly addNameRange     '0.0.13',
+30 silly addNameRange     '0.0.14',
+30 silly addNameRange     '0.0.15',
+30 silly addNameRange     '0.0.16',
+30 silly addNameRange     '0.0.0',
+30 silly addNameRange     '0.0.18',
+30 silly addNameRange     '1.0.0',
+30 silly addNameRange     '1.1.0',
+30 silly addNameRange     '2.0.0',
+30 silly addNameRange     '2.0.1',
+30 silly addNameRange     '2.1.0',
+30 silly addNameRange     '2.1.1',
+30 silly addNameRange     '2.1.2',
+30 silly addNameRange     '2.0.2',
+30 silly addNameRange     '2.2.0',
+30 silly addNameRange     '2.2.1',
+30 silly addNameRange     '2.2.2',
+30 silly addNameRange     '2.2.3',
+30 silly addNameRange     '3.0.0',
+30 silly addNameRange     '3.0.1',
+30 silly addNameRange     '3.0.2',
+30 silly addNameRange     '3.0.3',
+30 silly addNameRange     '3.0.4',
+30 silly addNameRange     '3.0.5',
+30 silly addNameRange     '3.0.6',
+30 silly addNameRange     '3.1.0',
+30 silly addNameRange     '3.2.0',
+30 silly addNameRange     '3.2.1',
+30 silly addNameRange     '3.3.0',
+30 silly addNameRange     '3.3.1',
+30 silly addNameRange     '3.4.0' ] ]
+31 verbose addNamed pouchdb@3.4.0
+32 silly addNamed semver.valid 3.4.0
+33 silly addNamed semver.validRange 3.4.0
+34 verbose addRemoteTarball https://registry.npmjs.org/pouchdb/-/pouchdb-3.4.0.tgz not in flight; adding
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/pouchdb/-/pouchdb-3.4.0.tgz',
+35 verbose addRemoteTarball   '6ed6f93286b1cb3e37c63377cb0e9b1914e1e308' ]
+36 info retry fetch attempt 1 at 3:38:55 PM
+37 info attempt registry request try #1 at 3:38:55 PM
+38 http fetch GET https://registry.npmjs.org/pouchdb/-/pouchdb-3.4.0.tgz
+39 http fetch 200 https://registry.npmjs.org/pouchdb/-/pouchdb-3.4.0.tgz
+40 silly fetchAndShaCheck shasum 6ed6f93286b1cb3e37c63377cb0e9b1914e1e308
+41 verbose addTmpTarball /tmp/npm-23847-a7a12abe/registry.npmjs.org/pouchdb/-/pouchdb-3.4.0.tgz not in flight; adding
+42 verbose addTmpTarball already have metadata; skipping unpack for pouchdb@3.4.0
+43 silly cache afterAdd pouchdb@3.4.0
+44 verbose afterAdd /home/undefined/.npm/pouchdb/3.4.0/package/package.json not in flight; writing
+45 verbose afterAdd /home/undefined/.npm/pouchdb/3.4.0/package/package.json written
+46 silly install resolved [ { name: 'pouchdb',
+46 silly install resolved     version: '3.4.0',
+46 silly install resolved     description: 'PouchDB is a pocket-sized database.',
+46 silly install resolved     main: './lib/index.js',
+46 silly install resolved     homepage: 'http://pouchdb.com/',
+46 silly install resolved     repository: { type: 'git', url: 'https://github.com/pouchdb/pouchdb' },
+46 silly install resolved     keywords: [ 'db', 'couchdb', 'pouchdb' ],
+46 silly install resolved     tags: [ 'db', 'couchdb', 'pouchdb' ],
+46 silly install resolved     dependencies:
+46 silly install resolved      { argsarray: '0.0.1',
+46 silly install resolved        bluebird: '^1.2.4',
+46 silly install resolved        debug: '^2.1.2',
+46 silly install resolved        'double-ended-queue': '^2.0.0-0',
+46 silly install resolved        es3ify: '^0.1.3',
+46 silly install resolved        express: '^4.10.4',
+46 silly install resolved        inherits: '~2.0.1',
+46 silly install resolved        'level-js': '^2.1.3',
+46 silly install resolved        'level-sublevel': '~5.2.0',
+46 silly install resolved        levelup: '~0.18.4',
+46 silly install resolved        lie: '^2.6.0',
+46 silly install resolved        'localstorage-down': '^0.6.2',
+46 silly install resolved        memdown: '^1.0.0',
+46 silly install resolved        'miller-rabin': '1.1.1',
+46 silly install resolved        'pouchdb-collate': '^1.2.0',
+46 silly install resolved        'pouchdb-collections': '^1.0.0',
+46 silly install resolved        'pouchdb-extend': '^0.1.2',
+46 silly install resolved        'pouchdb-mapreduce': '~2.3.2',
+46 silly install resolved        'pouchdb-upsert': '^1.0.2',
+46 silly install resolved        request: '~2.28.0',
+46 silly install resolved        'spark-md5': '0.0.5',
+46 silly install resolved        through2: '^0.4.1',
+46 silly install resolved        vuvuzela: '^1.0.0',
+46 silly install resolved        leveldown: '~0.10.2' },
+46 silly install resolved     optionalDependencies: { leveldown: '~0.10.2' },
+46 silly install resolved     devDependencies:
+46 silly install resolved      { 'pouchdb-express-router': '^0.0.2',
+46 silly install resolved        'bundle-collapser': '^1.1.1',
+46 silly install resolved        rimraf: '2.2.8',
+46 silly install resolved        'pouchdb-server': '^0.6.1',
+46 silly install resolved        'express-pouchdb': '^0.13.0',
+46 silly install resolved        commander: '~2.1.0',
+46 silly install resolved        'uglify-js': '~2.4.6',
+46 silly install resolved        jshint: '~2.5.10',
+46 silly install resolved        'pouchdb-http-proxy': '~0.10.3',
+46 silly install resolved        corsproxy: '~0.2.13',
+46 silly install resolved        'http-server': '~0.5.5',
+46 silly install resolved        wd: '~0.2.8',
+46 silly install resolved        tin: '~0.4.0',
+46 silly install resolved        ncp: '~0.5.0',
+46 silly install resolved        'sauce-connect-launcher': '0.2.2',
+46 silly install resolved        less: '~1.7.0',
+46 silly install resolved        tape: '~2.12.2',
+46 silly install resolved        glob: '~3.2.9',
+46 silly install resolved        'watch-glob': '~0.1.1',
+46 silly install resolved        mkdirp: '~0.4.2',
+46 silly install resolved        'exec-sync': '~0.1.6',
+46 silly install resolved        'ua-parser-js': '^0.6.2',
+46 silly install resolved        chai: '^1.9.1',
+46 silly install resolved        mocha: '^1.18.2',
+46 silly install resolved        istanbul: '^0.2.7',
+46 silly install resolved        cordova: '~3.4.1-0.1.0',
+46 silly install resolved        replace: '^0.2.9',
+46 silly install resolved        'es5-shim': '^3.1.1',
+46 silly install resolved        phantomjs: '^1.9.7-5',
+46 silly install resolved        browserify: '^6.1.0',
+46 silly install resolved        watchify: '^2.0.0',
+46 silly install resolved        derequire: '^2.0.0',
+46 silly install resolved        'selenium-standalone': '3.0.2' },
+46 silly install resolved     scripts:
+46 silly install resolved      { 'build-js': 'npm run build-main-js && npm run min && npm run build-plugins',
+46 silly install resolved        'build-main-js': 'browserify . -s PouchDB -p bundle-collapser/plugin | derequire > dist/pouchdb.js',
+46 silly install resolved        min: 'uglifyjs dist/pouchdb.js -mc > dist/pouchdb.min.js',
+46 silly install resolved        'build-plugins': 'sh bin/build-all-plugins.sh',
+46 silly install resolved        build: 'npm run version && mkdirp dist && npm run build-js && npm run license',
+46 silly install resolved        license: 'node ./bin/add-license.js',
+46 silly install resolved        version: 'node ./bin/get-version.js',
+46 silly install resolved        'test-unit': 'mocha tests/unit',
+46 silly install resolved        'test-node': 'sh bin/test-node.sh',
+46 silly install resolved        'test-component': 'mocha tests/component',
+46 silly install resolved        'test-browser': 'mkdirp dist && npm run build-js && node ./bin/test-browser.js',
+46 silly install resolved        cordova: 'npm run build && sh bin/run-cordova.sh',
+46 silly install resolved        jshint: 'jshint -c .jshintrc bin/ lib/ tests/',
+46 silly install resolved        dev: 'npm run version && CLIENT=dev bash bin/run-test.sh',
+46 silly install resolved        'launch-dev-server': 'npm run version && node ./bin/dev-server.js',
+46 silly install resolved        test: 'npm run version && npm run jshint && bash bin/run-test.sh',
+46 silly install resolved        release: 'sh bin/release.sh',
+46 silly install resolved        'publish-site': 'sh bin/publish-site.sh',
+46 silly install resolved        'build-site': 'node ./bin/build-site.js',
+46 silly install resolved        shell: 'node ./bin/repl.js',
+46 silly install resolved        'report-coverage': 'node ./bin/run-coverage.js',
+46 silly install resolved        'build-perf': 'browserify tests/performance/*.js > tests/performance-bundle.js' },
+46 silly install resolved     browser:
+46 silly install resolved      { request: './lib/deps/request-browser.js',
+46 silly install resolved        crypto: false,
+46 silly install resolved        './adapters/leveldb/leveldb': false,
+46 silly install resolved        './adapters/levelalt': false,
+46 silly install resolved        './lib/version.js': './lib/version-browser.js',
+46 silly install resolved        './lib/adapters/preferredAdapters.js': './lib/adapters/preferredAdapters-browser.js',
+46 silly install resolved        './lib/deps/buffer.js': './lib/deps/buffer-browser.js',
+46 silly install resolved        bluebird: 'lie',
+46 silly install resolved        fs: false },
+46 silly install resolved     browserify: { transform: [Object] },
+46 silly install resolved     gitHead: '49a54443166af1fbeae2147a2b0b300945879c4d',
+46 silly install resolved     bugs: { url: 'https://github.com/pouchdb/pouchdb/issues' },
+46 silly install resolved     _id: 'pouchdb@3.4.0',
+46 silly install resolved     _shasum: '6ed6f93286b1cb3e37c63377cb0e9b1914e1e308',
+46 silly install resolved     _from: 'pouchdb@*',
+46 silly install resolved     _npmVersion: '2.7.4',
+46 silly install resolved     _nodeVersion: '1.6.3',
+46 silly install resolved     _npmUser: { name: 'daleharvey', email: 'dale@arandomurl.com' },
+46 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+46 silly install resolved     dist:
+46 silly install resolved      { shasum: '6ed6f93286b1cb3e37c63377cb0e9b1914e1e308',
+46 silly install resolved        tarball: 'http://registry.npmjs.org/pouchdb/-/pouchdb-3.4.0.tgz' },
+46 silly install resolved     directories: {},
+46 silly install resolved     _resolved: 'https://registry.npmjs.org/pouchdb/-/pouchdb-3.4.0.tgz' } ]
+47 info install pouchdb@3.4.0 into /var/www/nw/GDrive
+48 info installOne pouchdb@3.4.0
+49 verbose installOne of pouchdb to /var/www/nw/GDrive not in flight; installing
+50 warn locking Error: EACCES, open '/home/undefined/.npm/_locks/pouchdb-534500c547936dad.lock'
+50 warn locking     at Error (native)
+50 warn locking  /home/undefined/.npm/_locks/pouchdb-534500c547936dad.lock failed { [Error: EACCES, open '/home/undefined/.npm/_locks/pouchdb-534500c547936dad.lock']
+50 warn locking   errno: -13,
+50 warn locking   code: 'EACCES',
+50 warn locking   path: '/home/undefined/.npm/_locks/pouchdb-534500c547936dad.lock' }
+51 verbose stack Error: Attempt to unlock /var/www/nw/GDrive/node_modules/pouchdb, which hasn't been locked
+51 verbose stack     at unlock (/home/undefined/.nvm/v0.11.15/lib/node_modules/npm/lib/utils/locker.js:66:11)
+51 verbose stack     at cb (/home/undefined/.nvm/v0.11.15/lib/node_modules/npm/lib/install.js:929:5)
+51 verbose stack     at /home/undefined/.nvm/v0.11.15/lib/node_modules/npm/lib/install.js:933:20
+51 verbose stack     at /home/undefined/.nvm/v0.11.15/lib/node_modules/npm/lib/utils/locker.js:40:9
+51 verbose stack     at cb (/home/undefined/.nvm/v0.11.15/lib/node_modules/npm/node_modules/lockfile/lockfile.js:149:38)
+51 verbose stack     at /home/undefined/.nvm/v0.11.15/lib/node_modules/npm/node_modules/lockfile/lockfile.js:177:38
+51 verbose stack     at FSReqWrap.oncomplete (fs.js:99:15)
+52 verbose cwd /var/www/nw/GDrive
+53 error Linux 3.13.0-49-generic
+54 error argv "/home/undefined/.nvm/v0.11.15/bin/node" "/home/undefined/.nvm/v0.11.15/bin/npm" "install" "pouchdb" "--save"
+55 error node v0.11.15
+56 error npm  v2.1.6
+57 error Attempt to unlock /var/www/nw/GDrive/node_modules/pouchdb, which hasn't been locked
+58 error If you need help, you may report this error at:
+58 error     <http://github.com/npm/npm/issues>
+59 verbose exit [ 1, true ]

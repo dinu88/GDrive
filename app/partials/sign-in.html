@@ -1,0 +1,20 @@
+<form class="form-horizontal" id="authenticate">
+  <fieldset>
+
+    <legend>Create key</legend>
+
+    <div class="form-group">
+      <a href="{{url}}" class="key_link" target="_blank">Generate key</a>
+    </div>
+    <!-- Text input-->
+    <div class="form-group">
+      <input ng-model="key" id="token" name="token" type="text" placeholder="insert token here" class="form-control input-md">
+    </div>
+
+    <!-- Button -->
+    <div class="form-group">
+      <button ng-click="submitKey()" name="singlebutton" class="btn btn-primary">Save</button>
+    </div>
+
+  </fieldset>
+</form>

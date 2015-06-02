@@ -1,0 +1,15 @@
+{
+  "name": "GDrive",
+  "main": "app/index.html",
+  "window": {
+    "toolbar": true,
+    "width": 480,
+    "height": 600,
+    "icon": "app/images/icon.png"
+  },
+  "dependencies": {
+    "express": "^4.12.3",
+    "googleapis": "^2.0.2",
+    "querystring": "^0.2.0"
+  }
+}
