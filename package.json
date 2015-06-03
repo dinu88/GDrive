@@ -1,6 +1,7 @@
 {
   "name": "GDrive",
   "main": "app/index.html",
+  "node-main": "app/Drive.js",
   "window": {
     "toolbar": true,
     "width": 480,

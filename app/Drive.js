@@ -3,7 +3,8 @@ var Drive = function() {
   var google = require('googleapis'),
       OAuth2 = google.auth.OAuth2,
       fs = require('fs'),
-      drive = null;
+      drive = null,
+      request = require('request');
 
   var config = {};
 
@@ -60,11 +61,12 @@ var Drive = function() {
     oauth2Client.getToken(code, function (err, token) {
       // Now tokens contains an access_token and an optional refresh_token. Save them.
       if (!err) {
-        console.log(token);
-        fn(null, true);
         oauth2Client.setCredentials(token);
-        credentials._id = 'credentials';
-        user.put(credentials);
+        self.credentials = token;
+        self.credentials._id = 'credentials';
+        //console.log(self.credentials);
+        user.put(self.credentials);
+        fn(null, true);
       } else {
         console.log(err);
       }
@@ -73,7 +75,6 @@ var Drive = function() {
 
   var isRoot = function(doc) {
     if (doc.doc.parents.length > 0 && doc.doc.parents[0].isRoot) {
-      console.log('test');
       return true;
     } else {
       return false;
@@ -88,9 +89,9 @@ var Drive = function() {
         docs = docs.rows;
         if (!folder || folder == 'root') {
           for (var i = 0; i < docs.length; i++) {
+            //console.log(docs[i].doc.title);
             if (docs[i].doc.parents.length > 0 && docs[i].doc.parents[0].isRoot) {
               found.push(docs[i].doc);
-              //console.log(found);
             }
           }
         } else {
@@ -196,14 +197,68 @@ var Drive = function() {
         } else {
           console.log("Got response: " + res.statusCode);
         }
-      }).pipe(fs.createWriteStream('/home/undefined/Desktop/' + title));
-
+      }).pipe(fs.createWriteStream('/home/undefined/Google Drive/' + title));
 
     };
 
+    //Not Tested!!
+    var uploadFile = function(file) {
+      var fstatus = fs.statSync(file);
+      fs.open(file, 'r', function (error, fileDescripter) {
+        if (error) {
+          console.log(error);
+          return;
+        }
+        var buffer = new Buffer(fstatus.size);
+
+        fs.read(fileDescripter, buffer, 0, fstatus.size, 0, function (err, num) {
+
+          request.post(
+              {
+                'url': 'https://www.googleapis.com/upload/drive/v2/files',
+                'qs': {
+                  //request module adds "boundary" and "Content-Length" automatically.
+                  'uploadType': 'multipart'
+
+                },
+                'auth': {
+                  'bearer': Token.access_token
+                },
+                'multipart': [
+                  {
+                    'Content-Type': 'application/json; charset=UTF-8',
+                    'body': JSON.stringify({
+                      'title': file,
+                      'parents': [
+                        {
+                          'id': 'root'
+                        }
+                      ]
+                    })
+                  },
+                  {
+                    //'Content-Type': 'image/png',
+                    'body': buffer
+                  }
+                ]
+              },
+              function (err, res) {
+                if (err) {
+                  console.log(err);
+                } else {
+                  console.log(res);
+                }
+              });
+        });
+
+
+      });
+    };
+
     var downloadNewRemoteFiles = function() {
-      console.log(newRemoteFiles);
+      //console.log(newRemoteFiles);
       for (var i in newRemoteFiles) {
+        console.log(i);
         if (newRemoteFiles[i].copyable &&
             newRemoteFiles[i].downloadUrl &&
             newRemoteFiles[i].title.indexOf('/') == -1) {
@@ -214,7 +269,11 @@ var Drive = function() {
     };
 
     var getNewLocalFiles = function() {
-
+      for(var i in localFiles) {
+        if (!fileExists('remote', localFiles[i].title)) {
+          newLocaleFiles.push(localFiles[i]);
+        }
+      }
     };
 
     getFiles('remote', folder, function(files) {
@@ -286,10 +345,12 @@ var Drive = function() {
     user.get('credentials').then(function (credentials) {
       console.log(credentials);
       self.credentials = credentials;
+      console.log(credentials);
       oauth2Client.setCredentials(credentials);
       drive = google.drive({ version: 'v2', auth: oauth2Client });
+      console.log('ready');
+      //getRemoteFiles();
       callEvent('ready');
-      getRemoteFiles();
     }).catch(function (err) {
       self.authUrl = oauth2Client.generateAuthUrl({
         access_type: config.access_type,
